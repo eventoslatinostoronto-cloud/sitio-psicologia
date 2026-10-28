@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portal Eucalipto</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400&family=Manrope:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/styles.css">
+<link rel="stylesheet" href="assets/admin.css">
+</head>
+<body class="admin">
+
+<!-- ============ LOGIN ============ -->
+<section class="login grove" id="login" hidden>
+  <form class="login-card" id="login-form">
+    <svg class="login-mark" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+      <path d="M32 61V24"/><path d="M32 46c-11 1-19-6-20-17 11-1 19 6 20 17Z"/><path d="M32 38c11 1 19-6 20-17-11-1-19 6-20 17Z"/><path d="M32 24c-6-5-7-13-1-20 6 7 6 15 1 20Z"/>
+    </svg>
+    <h1>Portal de terapeutas</h1>
+    <p class="muted">Eucalipto Psicología</p>
+    <div class="who-pick" id="who-pick"></div>
+    <div class="field"><label for="pin">PIN</label><input id="pin" type="password" inputmode="numeric" autocomplete="current-password" placeholder="••••"></div>
+    <p class="login-error" id="login-error" hidden>PIN incorrecto. Inténtalo de nuevo.</p>
+    <button class="btn btn-clay" type="submit">Entrar</button>
+    <p class="fine">PIN de demostración: <b>1234</b>. Cámbialo en Ajustes.</p>
+    <a class="fine" href="index.html">← Volver al sitio</a>
+  </form>
+</section>
+
+<!-- ============ APP ============ -->
+<div class="app" id="app" hidden>
+  <aside class="sidebar">
+    <a class="side-brand" href="#inicio">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true"><path d="M32 61V24"/><path d="M32 46c-11 1-19-6-20-17 11-1 19 6 20 17Z"/><path d="M32 38c11 1 19-6 20-17-11-1-19 6-20 17Z"/><path d="M32 24c-6-5-7-13-1-20 6 7 6 15 1 20Z"/></svg>
+      <span>EUCALIPTO<small>Portal</small></span>
+    </a>
+    <nav class="side-nav" aria-label="Portal">
+      <a href="#inicio" data-view="inicio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11 12 4l8 7v9h-5v-6H9v6H4z"/></svg><span>Inicio</span></a>
+      <a href="#agenda" data-view="agenda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg><span>Agenda</span></a>
+      <a href="#clientes" data-view="clientes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 19c.8-3.4 3.2-5 6-5s5.2 1.6 6 5"/><path d="M16 5.5a3 3 0 0 1 0 5.6M18 14c1.6.6 2.6 2 3 4"/></svg><span>Clientes</span></a>
+      <a href="#solicitudes" data-view="solicitudes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16v12H4z"/><path d="m4 7 8 6 8-6"/></svg><span>Solicitudes</span><b class="badge" id="req-badge" hidden></b></a>
+      <a href="#ajustes" data-view="ajustes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 3v2.5M12 18.5V21M3 12h2.5M18.5 12H21M5.6 5.6l1.8 1.8M16.6 16.6l1.8 1.8M5.6 18.4l1.8-1.8M16.6 7.4l1.8-1.8"/></svg><span>Ajustes</span></a>
+    </nav>
+    <div class="side-foot">
+      <div class="me" id="me"></div>
+      <button class="link-btn" id="logout" type="button">Cerrar sesión</button>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <p class="crumb" id="crumb"></p>
+        <h1 id="view-title">Inicio</h1>
+      </div>
+      <div class="top-actions">
+        <button class="gpill" id="gpill" type="button"></button>
+        <button class="btn btn-clay" id="new-session" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>Nueva sesión
+        </button>
+      </div>
+    </header>
+    <div class="demo-banner" id="demo-banner" hidden>
+      Estás viendo <b>datos de ejemplo</b>. Puedes borrarlos en Ajustes cuando empieces a usar el portal.
+    </div>
+    <div id="view"></div>
+  </main>
+</div>
+
+<!-- Modal + toast -->
+<div class="modal-back" id="modal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <header><h2 id="modal-title"></h2><button class="icon-x" type="button" data-close aria-label="Cerrar">×</button></header>
+    <div id="modal-body"></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" hidden></div>
+
+<script src="assets/admin.js"></script>
+</body>
+</html>

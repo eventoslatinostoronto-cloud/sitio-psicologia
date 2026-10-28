@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" fill="none">
+  <!-- Ventana en arco -->
+  <path d="M290 330V170a110 110 0 0 1 220 0v160z" fill="#ffffff" fill-opacity=".14"/>
+  <path d="M400 60v270M290 220h220" stroke="#ffffff" stroke-opacity=".22" stroke-width="4"/>
+  <!-- Cuadro -->
+  <rect x="560" y="120" width="96" height="120" rx="8" fill="#ffffff" fill-opacity=".16"/>
+  <path d="M575 215c20-30 38-42 66-48" stroke="#ffffff" stroke-opacity=".5" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="630" cy="152" r="10" fill="#ffffff" fill-opacity=".45"/>
+  <!-- Alfombra -->
+  <ellipse cx="400" cy="505" rx="340" ry="30" fill="#ffffff" fill-opacity=".13"/>
+  <!-- Planta alta izquierda -->
+  <path d="M70 320c-40-60-30-130 10-170 10 60 20 110-10 170z" fill="#8cc0a8"/>
+  <path d="M80 330c10-80 60-130 110-140-20 60-50 110-110 140z" fill="#6ea88f"/>
+  <path d="M75 330c-50-30-70-80-60-120 40 20 60 60 60 120z" fill="#a3d0bb"/>
+  <path d="M45 330h70l-10 170H55z" fill="#ffffff"/>
+  <!-- Sillón izquierdo (lila) -->
+  <g>
+    <rect x="120" y="230" width="66" height="220" rx="33" fill="#8f80d6"/>
+    <rect x="140" y="378" width="200" height="74" rx="26" fill="#8f80d6"/>
+    <rect x="168" y="352" width="168" height="42" rx="20" fill="#c4baf5"/>
+    <rect x="150" y="318" width="178" height="46" rx="23" fill="#a99deb"/>
+    <path d="M168 450l-8 52M312 450l8 52" stroke="#1b2340" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <!-- Mesa con planta -->
+  <ellipse cx="400" cy="408" rx="64" ry="12" fill="#ffffff"/>
+  <path d="M400 410v86" stroke="#ffffff" stroke-width="8"/>
+  <ellipse cx="400" cy="500" rx="36" ry="7" fill="#ffffff"/>
+  <rect x="384" y="356" width="34" height="46" rx="8" fill="#e9e5fb"/>
+  <path d="M400 356c-20-24-18-50 0-70 18 20 20 46 0 70z" fill="#8cc0a8"/>
+  <path d="M398 360c-30-6-44-26-44-46 26 2 40 20 44 46z" fill="#6ea88f"/>
+  <path d="M402 360c30-6 44-26 44-46-26 2-40 20-44 46z" fill="#a3d0bb"/>
+  <rect x="432" y="384" width="20" height="20" rx="4" fill="#c4baf5"/>
+  <!-- Sillón derecho (azul) -->
+  <g transform="translate(800 0) scale(-1 1)">
+    <rect x="120" y="230" width="66" height="220" rx="33" fill="#3a4672"/>
+    <rect x="140" y="378" width="200" height="74" rx="26" fill="#3a4672"/>
+    <rect x="168" y="352" width="168" height="42" rx="20" fill="#5a6697"/>
+    <rect x="150" y="318" width="178" height="46" rx="23" fill="#4a5684"/>
+    <path d="M168 450l-8 52M312 450l8 52" stroke="#1b2340" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <!-- Lámpara -->
+  <path d="M735 180v320" stroke="#1b2340" stroke-width="6"/>
+  <ellipse cx="735" cy="502" rx="28" ry="6" fill="#1b2340"/>
+  <path d="M700 180h70l-14-56h-42z" fill="#f4e7c8"/>
+  <ellipse cx="735" cy="200" rx="60" ry="22" fill="#f4e7c8" fill-opacity=".25"/>
+</svg>
